@@ -19,7 +19,8 @@ options.add_argument('--disable-dev-shm-usage')
 driver = webdriver.Chrome(service=Service(executable_path="/usr/bin/chromedriver"), options=options)
 
 #url = 'https://castbox.fm/channel/%DA%A9%D8%AA%D8%A7%D8%A8-%D8%B5%D9%88%D8%AA%DB%8C-%D9%88%D9%82%D8%AA%DB%8C-%D9%86%DB%8C%DA%86%D9%87-%DA%AF%D8%B1%DB%8C%D8%B3%D8%AA-id5163915?country=us'
-url = "https://castbox.fm/channel/Radio-chehrazi---%D8%B1%D8%A7%D8%AF%DB%8C%D9%88-%DA%86%D9%87%D8%B1%D8%A7%D8%B2%DB%8C-id2015353?country=us"
+# url = "https://castbox.fm/channel/Radio-chehrazi---%D8%B1%D8%A7%D8%AF%DB%8C%D9%88-%DA%86%D9%87%D8%B1%D8%A7%D8%B2%DB%8C-id2015353?country=us"
+url = "https://castbox.fm/va/5163915"
 
 driver.get(url)
 
