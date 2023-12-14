@@ -56,7 +56,7 @@ def download_files(url):
 
     for episode in episodes:
         # print(episode)
-        imagepath = dl_path + "/" + episode.find('p')['title'] + ".jpg"
+        imagepath = dl_path + "/" + episode.find('p')['title'].replace("/", "_") + ".jpg"
         if not os.path.isfile(imagepath):
             dl = requests.get(episode.find("img")["src"])
             with open(imagepath, "wb") as f:
@@ -64,7 +64,7 @@ def download_files(url):
 
         item = {
             "link": episode.find('a')['href'],
-            "title": episode.find('p')['title'],
+            "title": episode.find('p')['title'].replace("/", "_"),
             "duration": episode.find(class_="item icon time").string,
             "imageLink": episode.find("img")["src"],
             "imagePath": imagepath
